@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Пройти опрос</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <?php
+    
+    ?>
+
+    <div class="container">
+        <div id="quiz">
+            <div class="slide">
+                <h2>Вопрос 1: К какой отрасли относится Гринатом?</h2>
+                <label><input type="radio" name="question1" value="металлургическая отрасль"> металлургическая отрасль</label>
+                <label><input type="radio" name="question1" value="легкая промышленность"> легкая промышленность</label>
+                <label><input type="radio" name="question1" value="атомная отрасль"> атомная отрасль</label>
+            </div>
+            <div class="slide">
+                <h2>Вопрос 2: Гринатом является</h2>
+                <label><input type="radio" name="question2" value="ИТ-интегратор госкорпорации Росатом"> ИТ-интегратор госкорпорации Росатом</label>
+                <label><input type="radio" name="question2" value="сервисная компания"> сервисная компания</label>
+            </div>
+            <div class="slide">
+                <h2>Вопрос 3: Масштаб компании</h2>
+                <label><input type="radio" name="question3" value="32 города и 5000 сотрудников"> 32 города и 5000 сотрудников</label>
+                <label><input type="radio" name="question3" value="10 городов и 1600 сотрудников"> 10 городов и 1600 сотрудников</label>
+                <label><input type="radio" name="question3" value="45 городов и 7000 сотрудников"> 45 городов и 7000 сотрудников</label>
+            </div>
+            <button id="prevBtn">Назад</button>
+            <button id="nextBtn">Далее</button>
+        </div>
+    </div>
+
+    <!-- Модальное окно -->
+    <dialog class="modal">
+        <div class="modal-content">
+            <p>Спасибо за прохождение опроса!</p>
+            <button class="close">Закрыть</button>
+        </div>
+    </dialog>
+
+    <script src="script.js"></script>
+</body>
+</html>
