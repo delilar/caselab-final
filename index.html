@@ -5,6 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Пройти опрос</title>
     <link rel="stylesheet" href="style.css">
+    <style>
+        .slide {
+            display: none;
+        }
+        .slide.active {
+            display: block;
+        }
+    </style>
 </head>
 <body>
     <div class="container">
@@ -28,7 +36,7 @@
             </div>
             <button id="prevBtn" style="display: none;">Назад</button>
             <button id="nextBtn">Далее</button>
-            <button id="submitBtn">Отправить</button>
+            <button id="submitBtn" style="display: none;">Отправить</button>
         </div>
     </div>
 
@@ -41,7 +49,6 @@
     </dialog>
 
     <script>
-        
         document.addEventListener("DOMContentLoaded", function() {
             const slides = document.querySelectorAll('.slide');
             const prevButton = document.getElementById('prevBtn');
@@ -51,26 +58,12 @@
 
             function showSlide(index) {
                 slides.forEach((slide, i) => {
-                    if (i === index) {
-                        slide.classList.add('active');
-                    } else {
-                        slide.classList.remove('active');
-                    }
+                    slide.classList.toggle('active', i === index);
                 });
 
-                if (index === 0) {
-                    prevButton.style.display = 'none';
-                } else {
-                    prevButton.style.display = 'inline-block';
-                }
-
-                if (index === slides.length - 1) {
-                    nextButton.style.display = 'none';
-                    submitButton.style.display = 'block';
-                } else {
-                    nextButton.style.display = 'block';
-                    submitButton.style.display = 'none';
-                }
+                prevButton.style.display = index === 0 ? 'none' : 'inline-block';
+                nextButton.style.display = index === slides.length - 1 ? 'none' : 'inline-block';
+                submitButton.style.display = index === slides.length - 1 ? 'block' : 'none';
             }
 
             showSlide(currentSlide);
@@ -97,7 +90,6 @@
                 document.querySelector('.modal').close();
             });
         });
-
     </script>
 </body>
 </html>
