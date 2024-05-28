@@ -7,13 +7,9 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <?php
-    
-    ?>
-
     <div class="container">
         <div id="quiz">
-            <div class="slide">
+            <div class="slide active">
                 <h2>Вопрос 1: К какой отрасли относится Гринатом?</h2>
                 <label><input type="radio" name="question1" value="металлургическая отрасль"> металлургическая отрасль</label>
                 <label><input type="radio" name="question1" value="легкая промышленность"> легкая промышленность</label>
@@ -30,8 +26,9 @@
                 <label><input type="radio" name="question3" value="10 городов и 1600 сотрудников"> 10 городов и 1600 сотрудников</label>
                 <label><input type="radio" name="question3" value="45 городов и 7000 сотрудников"> 45 городов и 7000 сотрудников</label>
             </div>
-            <button id="prevBtn">Назад</button>
+            <button id="prevBtn" style="display: none;">Назад</button>
             <button id="nextBtn">Далее</button>
+            <button id="submitBtn" style="display: none;">Отправить</button>
         </div>
     </div>
 
